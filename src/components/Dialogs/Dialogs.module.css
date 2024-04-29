@@ -1,0 +1,33 @@
+.messangerBlock {
+  display: grid;
+  grid-template-areas: "d m";
+  grid-template-columns: 2fr 10fr;
+  background-color: #65baff;
+  width: 100%;
+  border-radius: 15px;
+}
+.dialog {
+  padding: 10px;
+}
+
+.messages {
+  padding: 10px;
+}
+.item{
+    padding-left: 15px;
+    margin-top: 5px;
+    
+}
+.item a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  
+}
+
+.item a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+  
+

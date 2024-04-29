@@ -1,0 +1,27 @@
+.content_text{
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.main_cap{
+    display: flex;
+    flex-direction: column;
+    background-color: #65baff;
+    padding: 15px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+
+    button{
+        margin-top: 15px;
+        justify-content: end;
+    }
+
+    textarea{
+        justify-content: start;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 15px;
+        width: 95%;
+    }
+}

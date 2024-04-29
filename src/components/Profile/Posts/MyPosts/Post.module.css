@@ -1,0 +1,65 @@
+
+.item{
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    background-color: #008cff;
+    margin-top:25px;
+}
+.cap{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    .cap_logo{
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    .trash{
+        display: flex;
+        width: 22px;
+        height: 22px;
+        justify-content: end;
+    }
+}
+.post{
+    width: 100%;
+    word-break: break-all;
+    background-color: #008cff;
+
+}
+.reaction{
+     display: flex;
+     flex-direction: row;
+     gap: 15px;
+
+}
+.like{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    img{
+        width: 22px;
+        height: 22px;
+        padding-top: 1px;
+    }
+
+}
+.dislike{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    img{
+        width: 20px;
+        height: 20px;
+        padding-top: 3px;
+    }
+
+}

@@ -5,7 +5,7 @@ import Nav from "./components/Navbar/Navbar";
 import Dialogs from "./components/Dialogs/Dialogs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+function  App() {
   return (
     <BrowserRouter>
       <div className="app-wrapper">

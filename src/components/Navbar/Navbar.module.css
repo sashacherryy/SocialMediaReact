@@ -14,20 +14,17 @@
   margin-top: 50px;
 }
 
-
 .item a {
   text-decoration: none;
+  color: #000000;
+}
+
+.active {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.item:hover > a {
   color: #ffffff;
-}
-
-.item:not(:hover) > a {
-  color: #000000; 
-}
-
-
-
-
-.item a.active{
-  color: gold;
 }
 

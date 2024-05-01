@@ -1,13 +1,15 @@
 import React from "react";
 import classes from "./Post.module.css";
 
+const trash =
+"https://www.shareicon.net/data/2016/01/19/255486_empty_512x512.png";
+const like =
+"https://www.freeiconspng.com/thumbs/like-icon-png/black-like-icon-png-13.png";
+const dislike =
+"https://i.pinimg.com/originals/72/1b/52/721b52c61f5781c740432f64b77f9ca6.png";
+
+
 const Post = (props) => {
-  const trash =
-    "https://www.shareicon.net/data/2016/01/19/255486_empty_512x512.png";
-  const like =
-    "https://www.freeiconspng.com/thumbs/like-icon-png/black-like-icon-png-13.png";
-  const dislike =
-    "https://i.pinimg.com/originals/72/1b/52/721b52c61f5781c740432f64b77f9ca6.png";
 
   return (
     <div className={classes.item}>

@@ -6,29 +6,53 @@
   width: 100%;
   border-radius: 15px;
 }
-.dialog {
-  padding: 10px;
+
+/* dialogs */
+.item{
+  display: flex;
+  flex-direction: column;
+  padding: 2px 15px;
+  width: 25%;
 }
+
+
+.dialogItems{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  flex-direction: row;
+  margin-top: 10px;
+
+  .logoDialog{
+    width: 35px;
+    height: 35px;
+  }
+
+  .dialogName{
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+  
+  }
+
+  .dialogName:hover{
+    color: #ffffff;
+  }
+
+}
+
+
+
+
+
+/* messages */
 
 .messages {
   padding: 10px;
 }
-.item{
-    padding-left: 15px;
-    margin-top: 5px;
-    
-}
-.item a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  
-}
 
-.item a:hover {
-    text-decoration: none;
-    color: #fff;
-}
 
 .active{
   color:gold;

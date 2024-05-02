@@ -4,44 +4,59 @@ import Post from "./MyPosts/Post";
 import { Button } from "@mui/material";
 
 const MyPosts = (props) => {
-  function validatePostContent() {
-    const textArea = document.getElementById('post_block');
-    const text = textArea.value;
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_])[A-Za-z\d$@$!%*?&_]{5,10}$/;
+  const newPostRef = React.createRef();
+
+  const validatePostContent = (props) => {
+    const text = newPostRef.current.value;
+    const regex = /^@?(\w){1,15}$/;
 
     if (regex.test(text)) {
-      textArea.style.border = "1px solid black";
+      newPostRef.current.style.border = "1px solid black";
+      props.addPost(text);
       return true;
     } else {
-      textArea.style.border = "1px solid red";
+      newPostRef.current.style.border = "1px solid red";
       return false;
     }
-  }
+  };
 
-
-  const posts = props.postData.map(post => (
+  const posts = props.postData.map((post) => (
     <Post
       key={post.id}
       message={post.message}
       name={post.name}
-      logo= {post.logo}
+      logo={post.logo}
       likeCount={post.likeCount}
       dislikeCount={post.dislikeCount}
     />
   ));
+
+  const onPostChange = (newPostRef) => {
+    const text = newPostRef.current.value;
+    props.updateNewPostText(text);
+  };
 
   return (
     <div className={classes.content_text}>
       <div className={classes.main_cap}>
         <div>My Posts</div>
         <div>
-          <textarea id="post_block" className={classes.post_block}></textarea>
-          <Button variant="contained">Add post</Button>
+          <textarea
+            ref={newPostRef}
+            id="post_block"
+            className={classes.post_block}
+            value={props.newPostText}
+            onChange={() => onPostChange(newPostRef)}
+          />
+          <Button
+            variant="contained"
+            onClick={() => validatePostContent(props)}
+          >
+            Add post
+          </Button>
         </div>
       </div>
-      <div className={classes.posts}>
-        {posts}
-      </div>
+      <div className={classes.posts}>{posts}</div>
     </div>
   );
 };

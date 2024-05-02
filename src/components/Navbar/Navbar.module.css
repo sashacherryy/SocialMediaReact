@@ -21,13 +21,7 @@
   cursor: pointer;
 }
 
-.active {
-  text-decoration: none;
-  color: #fff !important;
-}
-
 .item:hover > a {
   color: #ffffff;
-  
 }
 

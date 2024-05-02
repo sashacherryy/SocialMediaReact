@@ -1,8 +1,10 @@
 import React from "react";
 import classes from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
+import FriendsItems from './Friends/FriendsItems.jsx'
 
-const Navbar = () => {
+const Navbar = (props) => {
+
   return (
     <nav className={classes.nav}>
       <div className={classes.item}>
@@ -29,6 +31,12 @@ const Navbar = () => {
         <NavLink to="/settings" >
           Settings
         </NavLink>
+      </div>
+      <div className={classes.item}>
+          <div className="friends">Friends</div>
+          {props.state.friends.map((f) => (
+            <FriendsItems key={f.id} name={f.name} id={f.id} logo={f.logo}/>
+          ))}
       </div>
     </nav>
   );

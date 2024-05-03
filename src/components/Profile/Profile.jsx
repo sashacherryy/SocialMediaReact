@@ -4,6 +4,7 @@ import MyPosts from "./Posts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
+
   return (
     <div className={classes.content_profile}>
       <ProfileInfo />
@@ -13,6 +14,7 @@ const Profile = (props) => {
         addPost={props.addPost}
         updateNewPostText={props.updateNewPostText}
       />
+      
     </div>
   );
 };

@@ -1,4 +1,7 @@
-import { reRenderEntireTree } from "../render";
+let reRenderEntireTree = () => {
+  console.log("state is down")
+}
+
 var random_name = require("node-random-name");
 const logoUrl =
   "https://cdn.icon-icons.com/icons2/2643/PNG/512/male_man_people_person_avatar_white_tone_icon_159363.png";
@@ -32,8 +35,9 @@ let state = {
         likeCount: 29,
         dislikeCount: 68,
       },
+      
     ],
-    newPostText: "ввыф",
+    newPostText: "",
   },
   dialogsPage: {
     message: [
@@ -67,7 +71,7 @@ window.state = state;
 export const addPost = () => {
   let newPost = {
     id: state.profilePage.postData.length + 1,
-    logo: logoUrl,
+    logo: (state.profilePage.postData.length + 1) % 2 ? logoUrl : logoUrldima,
     name: random_name({ first: true }) + " " + random_name({ last: true })[0],
     message: state.profilePage.newPostText,
     likeCount: 0,
@@ -77,9 +81,13 @@ export const addPost = () => {
   reRenderEntireTree();
 };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
   reRenderEntireTree();
 };
+
+export const subscriber = (observer) => {
+  reRenderEntireTree = observer;
+}
 
 export default state;

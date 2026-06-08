@@ -19,9 +19,9 @@
 
     .post_block{
         justify-content: start;
-        padding: 10px;
         margin-top: 15px;
         border-radius: 15px;
-        width: 95%;
+        width: 100%;
+        resize: none;
     }
 }

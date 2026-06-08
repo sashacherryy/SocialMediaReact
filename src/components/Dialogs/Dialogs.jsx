@@ -13,7 +13,7 @@ const Dialogs = (props) => {
       <div className={classes.dialog}>
         <div className={classes.dialogs_item}>
           {props.state.dialogsData.map((d) => (
-            <DialogItem key={d.id} name={d.name} id={d.id} />
+            <DialogItem key={d.id} name={d.name} id={d.id} logo={d.logo}/>
           ))}
         </div>
       </div>

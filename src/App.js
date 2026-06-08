@@ -3,18 +3,25 @@ import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Nav from "./components/Navbar/Navbar";
 import Dialogs from "./components/Dialogs/Dialogs";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
+
 function App(props) {
   return (
-    <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <div className="content">
-          <Nav />
+          <Nav state={props.appState.sideBar} />
           <Routes>
             <Route
               path="/"
-              element={<Profile state={props.appState.profilePage} />}
+              element={
+                <Profile
+                  profilePage={props.appState.profilePage}
+                  newPostText={props.appState.profilePage.newPostText}
+                  addPost={props.addPost}
+                  updateNewPostText={props.updateNewPostText}
+                />
+              }
             />
             <Route
               path="/dialogs"
@@ -23,7 +30,6 @@ function App(props) {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 

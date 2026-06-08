@@ -1,0 +1,20 @@
+.item{
+    display: flex;
+    flex-direction: row;
+}
+
+.friendsItems{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+}
+.friendsLogo{
+    width: 25px;
+    height: 25px;
+}
+.friendsName{
+    padding-left: 10px;
+}
+.friendsName:hover{
+    color: #fff;
+}
